@@ -1,34 +1,17 @@
 package alex;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import javax.swing.JComponent;
+import javax.swing.*;
+import java.awt.*;
 
-
-class Slice {
-    String name;
-    Color color;
-    Integer value;
-
-    public Slice(String name, Color color, Integer value) {
-        this.name = name;
-        this.value = value;
-        this.color = color;
-    }
-}
-
-class Pie extends JComponent{
-    Slice[] slice = {null,null,null,null};
+public class Pie extends JComponent {
+    public Slice[] slice = {null, null, null, null};
 
     public Pie(Slice[] slice) {
-        this.slice[0]=slice[0];
-        this.slice[1]=slice[1];
-        this.slice[2]=slice[2];
-        this.slice[3]=slice[3];
+        this.slice[0] = slice[0];
+        this.slice[1] = slice[1];
+        this.slice[2] = slice[2];
+        this.slice[3] = slice[3];
     }
-
 
 
     public void paint(Graphics graph) {
